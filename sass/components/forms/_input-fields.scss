@@ -168,7 +168,7 @@ textarea.materialize-textarea {
 
     .prefix ~ label,
     .prefix ~ .validate ~ label {
-      width: calc(100% - 3rem - #{$gutter-width});
+      width: calc(100% - 3rem - $gutter-width);
     }
   }
 
