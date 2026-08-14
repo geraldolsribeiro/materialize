@@ -1,3 +1,4 @@
+@use "variables" as *;
 #toast-container {
   display:block;
   position: fixed;
@@ -20,7 +21,7 @@
 }
 
 .toast {
-  @extend .z-depth-1;
+  @extend .z-depth-1 !optional;
   border-radius: 2px;
   top: 35px;
   width: auto;

@@ -1,4 +1,6 @@
+@use "variables" as *;
 @use "sass:color";
+@use "components/color-variables";
 
 $border-color: rgba(0,0,0,.14);
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -29,13 +31,13 @@ h5 > span {
 }
 
 nav {
-  // background-color: color("materialize-red", "lighten-2");
+  // background-color: color-variables.mat-color("materialize-red", "lighten-2");
 
   a {
     color: rgba(0,0,0,.87);
   }
   ul li a:hover, ul li.active {
-    background-color: color("materialize-red", "lighten-1");
+    background-color: color-variables.mat-color("materialize-red", "lighten-1");
   }
 }
 
@@ -44,7 +46,7 @@ td, th {
 }
 
 .header {
-  color: color("materialize-red", "lighten-2");
+  color: color-variables.mat-color("materialize-red", "lighten-2");
   font-weight: 300;
 }
 
@@ -240,7 +242,7 @@ a.sidenav-trigger.top-nav {
   top: 28px;
   float: none;
   margin-left: 1.5rem;
-  color: color("materialize-red", "lighten-3");
+  color: color-variables.mat-color("materialize-red", "lighten-3");
   font-size: 36px;
   z-index: 2;
 
@@ -366,9 +368,9 @@ a.sidenav-trigger.top-nav {
 #download-button,
 #upgrade-button {
   &:hover {
-    background-color: color.adjust(color("materialize-red", "base"), $lightness: 30%, $space: hsl);
+    background-color: color.adjust(color-variables.mat-color("materialize-red", "base"), $lightness: 30%, $space: hsl);
   }
-  background-color: color("materialize-red", "lighten-2");
+  background-color: color-variables.mat-color("materialize-red", "lighten-2");
   width: 260px;
   height: 70px;
   margin: 4px;
@@ -383,7 +385,7 @@ a.sidenav-trigger.top-nav {
 
   i {
     margin: 40px 0;
-    color: color("materialize-red", "lighten-2");
+    color: color-variables.mat-color("materialize-red", "lighten-2");
     font-size: 7rem;
     display: block;
   }
@@ -401,14 +403,14 @@ a.sidenav-trigger.top-nav {
   background-color: #FFF;
   position: relative;
   a {
-      color: color("materialize-red", "lighten-2");
+      color: color-variables.mat-color("materialize-red", "lighten-2");
     }
   li {
     &:hover {
-      background-color: color("materialize-red", "lighten-5");
+      background-color: color-variables.mat-color("materialize-red", "lighten-5");
     }
     &.active {
-      background-color: color("materialize-red", "lighten-5");
+      background-color: color-variables.mat-color("materialize-red", "lighten-5");
     }
   }
   .container {
@@ -444,15 +446,15 @@ a.sidenav-trigger.top-nav {
 *******************/
 
 #site-layout-example-left {
-  background-color: color("blue-grey", "lighten-2");
+  background-color: color-variables.mat-color("blue-grey", "lighten-2");
   height: 300px;
 }
 #site-layout-example-right {
-  background-color: color("teal", "lighten-1");
+  background-color: color-variables.mat-color("teal", "lighten-1");
   height: 300px;
 }
 #site-layout-example-top {
-  background-color: color("red", "lighten-2");
+  background-color: color-variables.mat-color("red", "lighten-2");
   height: 42px;
 }
 
@@ -605,7 +607,7 @@ $height: auto;
 .tabs-wrapper {
   position: relative;
   height: 48px;
-  @extend .hide-on-small-only;
+  @extend .hide-on-small-only !optional;
 
   .row.pinned {
     position: fixed;
@@ -624,7 +626,7 @@ thead {
 
 // Shadow demo styling
 .shadow-demo {
-  background-color: color("teal", "lighten-1");
+  background-color: color-variables.mat-color("teal", "lighten-1");
   width: 100px;
   height: 100px;
   margin: 20px auto;
@@ -760,13 +762,13 @@ code[class*="language-"] {
     vertical-align: top;
     display: inline-block;
     font-size: 13px;
-    color: color("red", "lighten-2");
+    color: color-variables.mat-color("red", "lighten-2");
   }
   a.carbon-poweredby {
     position: relative;
     left: 28px;
     font-size: 11px;
-    color: color("red", "lighten-3");
+    color: color-variables.mat-color("red", "lighten-3");
   }
 }
 .buysellads #carbonads {
@@ -887,8 +889,8 @@ code[class*="language-"] {
       left: 0;
       bottom: -15px;
     }
-    .bsa_it_ad .bsa_it_t { color: color("red", "lighten-2"); }
-    .bsa_it_ad .bsa_it_d { color: color("red", "lighten-3"); }
+    .bsa_it_ad .bsa_it_t { color: color-variables.mat-color("red", "lighten-2"); }
+    .bsa_it_ad .bsa_it_d { color: color-variables.mat-color("red", "lighten-3"); }
   }
 
   .bsa_it_ad a {
@@ -915,7 +917,7 @@ code[class*="language-"] {
     background-color: transparent;
 
     .bsa_it_t { color: #fff; }
-    .bsa_it_d { color: color("red", "lighten-4"); }
+    .bsa_it_d { color: color-variables.mat-color("red", "lighten-4"); }
   }
 
   .bsa_it_p {
@@ -923,7 +925,7 @@ code[class*="language-"] {
     left: 40px;
     bottom: -5px;
 
-    a { color: color("red", "lighten-4"); }
+    a { color: color-variables.mat-color("red", "lighten-4"); }
   }
 }
 
@@ -1045,7 +1047,7 @@ body.parallax-demo footer {
   }
   .btn {
     &:not(.waves-light) {
-    background-color: color("shades", "white");
+    background-color: color-variables.mat-color("shades", "white");
     color: #212121;
     }
   }
@@ -1101,14 +1103,14 @@ body.parallax-demo footer {
       color: $off-black;
       &:hover{
       color: inherit;
-      background-color: color("materialize-red", "lighten-5");
+      background-color: color-variables.mat-color("materialize-red", "lighten-5");
       }
     }
 
   }
 
   .txlive-langselector-toggle {
-    border-bottom: 2px solid color("materialize-red", "lighten-2");
+    border-bottom: 2px solid color-variables.mat-color("materialize-red", "lighten-2");
   }
 
   .txlive-langselector-current {
@@ -1250,7 +1252,7 @@ body.themes {
     }
 
     padding: 60px 0 40px 0;
-    @extend .valign-wrapper;
+    @extend .valign-wrapper !optional;
 
     .theme-preview {
       width: 100%;
@@ -1263,7 +1265,7 @@ body.themes {
     .badge.new {
       &.modal-trigger {
         &:hover {
-          @extend .z-depth-2;
+          @extend .z-depth-2 !optional;
           opacity: .8;
         }
         cursor: pointer;

@@ -1,3 +1,4 @@
+@use "variables" as *;
 @use "sass:color";
 
 // shared styles
@@ -70,12 +71,12 @@
   background-color: $button-raised-background;
   text-align: center;
   letter-spacing: .5px;
-  @extend .z-depth-1;
+  @extend .z-depth-1 !optional;
   transition: background-color .2s ease-out;
   cursor: pointer;
   &:hover {
     background-color: $button-raised-background-hover;
-    @extend .z-depth-1-half;
+    @extend .z-depth-1-half !optional;
   }
 }
 
@@ -83,7 +84,7 @@
 .btn-floating {
   &:hover {
     background-color: $button-floating-background-hover;
-    @extend .z-depth-1-half;
+    @extend .z-depth-1-half !optional;
   }
   &:before {
     border-radius: 0;
@@ -131,7 +132,7 @@
   padding: 0;
   background-color: $button-floating-background;
   border-radius: $button-floating-radius;
-  @extend .z-depth-1;
+  @extend .z-depth-1 !optional;
   transition: background-color .3s;
   cursor: pointer;
   vertical-align: middle;
@@ -296,7 +297,7 @@ button.btn-floating {
 
 // Large button
 .btn-large {
-  @extend .btn;
+  @extend .btn !optional;
   height: $button-large-height;
   line-height: $button-large-height;
   font-size: $button-large-font-size;
@@ -309,7 +310,7 @@ button.btn-floating {
 
 // Small button
 .btn-small {
-  @extend .btn;
+  @extend .btn !optional;
   height: $button-small-height;
   line-height: $button-small-height;
   font-size: $button-small-font-size;

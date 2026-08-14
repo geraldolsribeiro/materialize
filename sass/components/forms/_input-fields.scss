@@ -1,3 +1,4 @@
+@use "../variables" as *;
 /* Text Inputs + Textarea
    ========================================================================== */
 
@@ -68,19 +69,19 @@ textarea.materialize-textarea {
   &:focus.valid ~ .helper-text[data-success],
   &.invalid ~ .helper-text[data-error],
   &:focus.invalid ~ .helper-text[data-error] {
-    @extend %hidden-text;
+    @extend %hidden-text !optional;
   }
 
   // Valid Input Style
   &.valid,
   &:focus.valid {
-    @extend %valid-input-style;
+    @extend %valid-input-style !optional;
   }
 
   // Custom Success Message
   &.valid ~ .helper-text:after,
   &:focus.valid ~ .helper-text:after {
-    @extend %custom-success-message;
+    @extend %custom-success-message !optional;
   }
   &:focus.valid ~ label {
     color: $input-success-color;
@@ -89,13 +90,13 @@ textarea.materialize-textarea {
   // Invalid Input Style
   &.invalid,
   &:focus.invalid {
-    @extend %invalid-input-style;
+    @extend %invalid-input-style !optional;
   }
 
   // Custom Error message
   &.invalid ~ .helper-text:after,
   &:focus.invalid ~ .helper-text:after {
-    @extend %custom-error-message;
+    @extend %custom-error-message !optional;
   }
   &:focus.invalid ~ label {
     color: $input-error-color;
@@ -108,7 +109,7 @@ textarea.materialize-textarea {
 
   // Form Message Shared Styles
   & + label:after {
-    @extend %input-after-style;
+    @extend %input-after-style !optional;
   }
 }
 
@@ -163,7 +164,7 @@ textarea.materialize-textarea {
   // Gutter spacing
   &.col {
     label {
-      left: $gutter-width / 2;
+      left: $gutter-width * 0.5;
     }
 
     .prefix ~ label,
@@ -224,7 +225,7 @@ textarea.materialize-textarea {
     width: $input-height;
     font-size: $input-icon-size;
     transition: color .2s;
-    top: ($input-height - $input-icon-size) / 2;
+    top: ($input-height - $input-icon-size) * 0.5;
 
     &.active { color: $input-focus-color; }
   }

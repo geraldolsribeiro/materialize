@@ -1,4 +1,6 @@
 @use "sass:color";
+@use "variables" as *;
+@use "color-variables";
 
 //Default styles
 
@@ -116,7 +118,7 @@ a {
 .divider {
   height: 1px;
   overflow: hidden;
-  background-color: color("grey", "lighten-2");
+  background-color: color-variables.mat-color("grey", "lighten-2");
 }
 
 

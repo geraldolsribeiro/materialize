@@ -1,9 +1,10 @@
+@use "variables" as *;
 .modal {
   &:focus {
     outline: none;
   }
 
-  @extend .z-depth-5;
+  @extend .z-depth-5 !optional;
 
   display: none;
   position: fixed;

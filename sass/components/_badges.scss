@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "color-variables";
+
 // Badges
 span.badge {
   min-width: 3rem;
@@ -7,7 +10,7 @@ span.badge {
   font-size: 1rem;
   line-height: $badge-height;
   height: $badge-height;
-  color: color('grey', 'darken-1');
+  color: color-variables.mat-color('grey', 'darken-1');
   float: right;
   box-sizing: border-box;
 

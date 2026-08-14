@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "color-variables";
 
 // ==========================================================================
 // Materialize variables
@@ -38,14 +39,14 @@
 
 @use "sass:math";
 
-$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color: color-variables.mat-color("materialize-red", "lighten-2") !default;
 $primary-color-light: color.adjust($primary-color, $lightness: 15%, $space: hsl) !default;
 $primary-color-dark: color.adjust($primary-color, $lightness: -15%, $space: hsl) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
-$success-color: color("green", "base") !default;
-$error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$secondary-color: color-variables.mat-color("teal", "lighten-1") !default;
+$success-color: color-variables.mat-color("green", "base") !default;
+$error-color: color-variables.mat-color("red", "base") !default;
+$link-color: color-variables.mat-color("light-blue", "darken-1") !default;
 
 
 // 2. Badges
@@ -105,7 +106,7 @@ $button-floating-radius: 50% !default;
 
 $card-padding: 24px !default;
 $card-bg-color: #fff !default;
-$card-link-color: color("orange", "accent-2") !default;
+$card-link-color: color-variables.mat-color("orange", "accent-2") !default;
 $card-link-color-light: color.adjust($card-link-color, $lightness: 20%, $space: hsl) !default;
 
 
@@ -168,7 +169,7 @@ $dropdown-item-height: 50px !default;
 
 // Text Inputs + Textarea
 $input-height: 3rem !default;
-$input-border-color: color("grey", "base") !default;
+$input-border-color: color-variables.mat-color("grey", "base") !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
 $input-error-color: $error-color !default;
@@ -269,9 +270,9 @@ $sidenav-line-height: $sidenav-item-height !default;
 // 15. Photo Slider
 // ==========================================================================
 
-$slider-bg-color: color('grey', 'base') !default;
-$slider-bg-color-light: color('grey', 'lighten-2') !default;
-$slider-indicator-color: color('green', 'base') !default;
+$slider-bg-color: color-variables.mat-color('grey', 'base') !default;
+$slider-bg-color-light: color-variables.mat-color('grey', 'lighten-2') !default;
+$slider-indicator-color: color-variables.mat-color('green', 'base') !default;
 
 
 // 16. Spinners | Loaders
